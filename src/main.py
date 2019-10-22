@@ -36,6 +36,10 @@ from gi.repository import Gtk, Gio
 from .window import GtktodoappWindow
 
 
+def test_button(button):
+    print("Button has been clicked")
+
+
 class Application(Gtk.Application):
     def __init__(self):
         super().__init__(application_id='com.github.konlampro94.gtktodoapp',
@@ -46,6 +50,10 @@ class Application(Gtk.Application):
         if not win:
             win = GtktodoappWindow(application=self)
         win.present()
+
+        #but = Gtk.Button("Click Here...")
+        #win.add(but) # add button
+        #but.connect("clicked", test_button) # connect button
 
 
 def main(version):

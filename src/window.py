@@ -33,7 +33,20 @@ from gi.repository import Gtk
 class GtktodoappWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'GtktodoappWindow'
 
-    label = Gtk.Template.Child()
+    #label = Gtk.Template.Child()
+    todo_list = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.__fill_todo_list()
+
+    def __fill_todo_list(self):
+        tasks = ["Learn Go",
+                "Learn Rust",
+                "Learn C++"]
+
+        for item in tasks:
+            todo_label = Gtk.Label(item)
+            todo_label.show()
+            self.todo_list.add(todo_label)
+            
