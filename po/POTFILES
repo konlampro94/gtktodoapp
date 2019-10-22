@@ -1,0 +1,7 @@
+data/com.github.konlampro94.gtktodoapp.desktop.in
+data/com.github.konlampro94.gtktodoapp.appdata.xml.in
+data/com.github.konlampro94.gtktodoapp.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
